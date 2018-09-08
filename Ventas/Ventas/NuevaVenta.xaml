@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ventas.NuevaVenta"
+             Title="Nueva Venta">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="MenuItem1" Order="Primary" Icon="listo.png" Text="Vender" Priority="0" Clicked="MenuItem1_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="35,15,15,15">
+
+                <Label Text="Fecha" FontSize="Medium"/>
+                <DatePicker x:Name="fecha" Format="dd-MM-yyyy" MinimumDate="{Binding Item.StartDate}" />
+
+                <Button Text="Agregar Cliente"
+                    x:Name="cliente1"
+                    BackgroundColor="LightBlue"
+                    Clicked="BotonCliente"/>
+                <Entry x:Name="cliente"/>
+
+                <Button Text="Agregar Producto"
+                    x:Name="producto1"
+                    BackgroundColor="LightBlue"
+                    Clicked="BotonListaProducto"/>
+                <Entry x:Name="producto"/>
+
+                <Label Text="Pagado" FontSize="Medium"/>
+                <Entry x:Name="pagado"/>
+
+                <Label Text="Foto URL" FontSize="Medium"/>
+                <Entry x:Name="foto"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

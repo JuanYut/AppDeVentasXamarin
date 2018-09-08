@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ventas.ListaProducto"
+             Title="Lista de Productos">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="MenuItem1" Order="Primary" Icon="mas.png" Text="Nuevo Producto" Priority="0" Clicked="BotonAgregarProducto" />
+    </ContentPage.ToolbarItems>
+
+
+    <ContentPage.Content>
+        <!--AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"-->
+
+        <StackLayout BackgroundColor="White">
+            <!-- Place new controls here -->
+
+
+            <ListView x:Name="lst" HasUnevenRows="True" Margin="15,5,15,15" ItemTapped="ItemSeleccionado">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <Frame BorderColor="Brown" BackgroundColor="White" Margin="5" CornerRadius="10">
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout Orientation="Vertical">
+                                        <Label Text="Nombre" FontSize="Micro" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Nombre}" FontSize="Small" TextColor="Brown"></Label>
+
+                                        <Label Text="Precio de venta" FontSize="Micro" FontAttributes="Bold"/>
+                                        <Label Text="{Binding PreciodeVenta}" TextColor="Brown" FontSize="Small"></Label>
+
+                                        <Label Text="Cantidad" FontSize="Micro" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Cantidad}" TextColor="Brown" FontSize="Small"></Label>
+
+                                        <Label Text="Precio de costo" FontSize="Micro" FontAttributes="Bold"/>
+                                        <Label Text="{Binding PreciodeCosto}" TextColor="Brown" FontSize="Small"></Label>
+
+                                        <Label Text="Descipción" FontSize="Micro" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Descripcion}" TextColor="Brown" FontSize="Small"></Label>
+                                    </StackLayout>
+                                    <!--Label Text="{Binding idpersona}" TextColor="Blue" HeightRequest="30" WidthRequest="50" HorizontalOptions="EndAndExpand"/-->
+                                    <Image Source="{Binding Foto}" HeightRequest="30" WidthRequest="150" HorizontalOptions="EndAndExpand" Margin="5"/>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+        <!--/-->
+    </ContentPage.Content>
+
+</ContentPage>

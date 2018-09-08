@@ -1,0 +1,17 @@
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\bin\Debug\netstandard2.0\Ventas.deps.json
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\bin\Debug\netstandard2.0\Ventas.dll
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\Ventas.csprojAssemblyReference.cache
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\Ventas.csproj.CoreCompileInputs.cache
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\Ventas.AssemblyInfoInputs.cache
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\Ventas.AssemblyInfo.cs
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\AgregarProducto.xaml.g.cs
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\DetalleProducto.xaml.g.cs
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\bin\Debug\netstandard2.0\Ventas.pdb
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\XamlC.stamp
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\Ventas.dll
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\Ventas.pdb
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\NuevaVenta.xaml.g.cs
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\AgregarCliente.xaml.g.cs
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\ListaProducto.xaml.g.cs
