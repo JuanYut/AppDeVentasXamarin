@@ -20,7 +20,7 @@ namespace Ventas
             [AutoIncrement]
             public int Id { get; set; }
             public string Nombre { get; set; }
-            public int Telefono { get; set; }
+            public string Telefono { get; set; }
             public string Correo { get; set; }
             public string Comentarios { get; set; }
             public string Foto { get; set; }
@@ -41,7 +41,7 @@ namespace Ventas
             var registro = new Clientes
             {
                 Nombre = nombre.Text,
-                Telefono = int.Parse(telefono.Text),
+                Telefono = telefono.Text,
                 Correo = correo.Text,
                 Comentarios = comentarios.Text,
                 Foto = foto.Text

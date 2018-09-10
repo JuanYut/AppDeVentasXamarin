@@ -15,7 +15,7 @@ namespace Ventas
 	public partial class NuevaVenta : ContentPage
 	{
 
-        public class Productos
+        public class Ventas
         {
             [PrimaryKey]
             [AutoIncrement]
@@ -26,7 +26,7 @@ namespace Ventas
             public string Pagado { get; set; }
         }
 
-        private void Ventas ()
+        private void AgregarVentas()
 		{
             string folder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData);
             string rutaDb = System.IO.Path.Combine(folder, "MiNegocio1.db");
@@ -36,12 +36,13 @@ namespace Ventas
 
             // Crea la tabla si no existe
 
-            db.CreateTable<Productos>();
+            db.CreateTable<Ventas>();
 
-            var registro = new Productos
+            var registro = new Ventas
             {
                 //DateTime.Now.ToString("dd/MM/yyyy")
-                Fecha = fecha.ToString(),
+                //DateTimePicker1.Value.ToString("dd/MM/yyyy");
+                Fecha = fecha.Date.ToString(),
                 Cliente = cliente.Text,
                 Producto = producto.Text,
                 Pagado = pagado.Text
@@ -54,7 +55,7 @@ namespace Ventas
         // Botones Cliente ------------------------------------------------------------------------------------------------------------- //
         async private void BotonCliente(object sender, EventArgs e)
         {
-            var clientePage = new AgregarCliente();
+            var clientePage = new ListaCliente();
             await Navigation.PushAsync(clientePage);
         }
         // Botones Producto ----------------------------------------------------------------------------------------------------------- //
@@ -72,7 +73,7 @@ namespace Ventas
 
         private void MenuItem1_Clicked(object sender, EventArgs e)
         {
-            Ventas();
+            AgregarVentas();
             Application.Current.MainPage.Navigation.PopAsync();
         }
 

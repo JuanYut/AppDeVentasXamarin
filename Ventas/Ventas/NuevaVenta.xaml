@@ -30,9 +30,6 @@
                 <Label Text="Pagado" FontSize="Medium"/>
                 <Entry x:Name="pagado"/>
 
-                <Label Text="Foto URL" FontSize="Medium"/>
-                <Entry x:Name="foto"/>
-
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

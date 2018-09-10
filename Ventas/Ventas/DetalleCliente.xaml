@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ventas.DetalleCliente"
+             Title="Editar Cliente">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="MenuItem1" Order="Primary" Icon="listo.png" Text="Guardar" Priority="0" Clicked="ActualizarRegistro" />
+        <ToolbarItem Name="MenuItem1" Order="Primary" Icon="borrar.png" Text="Borrar" Priority="1" Clicked="EliminaCliente" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image Source="{Binding Foto}"/>
+                <StackLayout Margin="35,15,15,15">
+                    <Label x:Name="Id" Text="{Binding Id}" IsVisible="False"/>
+                    <Label Text="Nombre" FontSize="Micro"/>
+                    <Entry x:Name="nombre" Text="{Binding Nombre}" FontSize="Small"/>
+
+                    <Label Text="Precio de venta" FontSize="Micro" />
+                    <Entry x:Name="telefono" Text="{Binding Telefono}" Keyboard="Numeric" FontSize="Small"/>
+
+                    <Label Text="Cantidad" FontSize="Micro"/>
+                    <Entry x:Name="correo" Text="{Binding Cantidad}" FontSize="Small"/>
+
+                    <Label Text="Precio de costo" FontSize="Micro"/>
+                    <Entry x:Name="comentarios" Text="{Binding PreciodeCosto}" FontSize="Small"/>
+
+                    <Label Text="Foto URL" FontSize="Micro"/>
+                    <Entry x:Name="foto" Text="{Binding Foto}" FontSize="Small"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

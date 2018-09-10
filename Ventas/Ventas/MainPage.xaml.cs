@@ -21,17 +21,15 @@ namespace AppBaseLocal
             public string ImageName { get; set; }
         }
 
-        public class Productos
+        public class Ventas
         {
             [PrimaryKey]
             [AutoIncrement]
             public int Id { get; set; }
-            public string Nombre { get; set; }
-            public double PreciodeVenta { get; set; }
-            public int Cantidad { get; set; }
-            public double PreciodeCosto { get; set; }
-            public string Descripcion { get; set; }
-            public string Foto { get; set; }
+            public string Fecha { get; set; }
+            public string Cliente { get; set; }
+            public string Producto { get; set; }
+            public string Pagado { get; set; }
         }
 
         public void AbrirBase()
@@ -41,17 +39,9 @@ namespace AppBaseLocal
             // DisplayAlert("Ruta de la base de datos", rutaDb, "ok");
             // Crea la base de datos si no existe, y crea una conexión
             var db = new SQLiteConnection(rutaDb);
-            db.CreateTable<Productos>();
-            var todoslosproductos = db.Table<Productos>().ToList();
-            /*
-            string s = "";
-            foreach (var x in todoslosproductos)
-            {
-            s = s +"Nombre:"+ x.Nombre + " Precio de venta:"+x.PreciodeVenta+" Id:"+x.Id+" Cantidad:"+x.Cantidad+" Precio de costo:"+x.PreciodeCosto+" Descipción:"+x.Descripcion+"\n";
-            }
+            db.CreateTable<Ventas>();
+            var todoslosproductos = db.Table<Ventas>().ToList();
 
-            DisplayAlert(" Productos "+todoslosproductos.Count, s, "ok");*/
-            // db.DropTable<Productos>();
             lst.ItemsSource = null;
             lst.ItemsSource = todoslosproductos;
         }
@@ -66,11 +56,8 @@ namespace AppBaseLocal
             var db = new SQLiteConnection(rutaDb);
 
             // Crea la tabla si no existe
-
             db.CreateTable<News>();
-
-
-
+            
             db.DeleteAll<News>();
 
             var news1 = new News
@@ -140,6 +127,11 @@ namespace AppBaseLocal
 
         }
 
+        private void MainPage_Appearing(object sender, EventArgs e)
+        {
+            AbrirBase();
+        }
+
         public MainPage()
         {
             InitializeComponent();
@@ -147,11 +139,6 @@ namespace AppBaseLocal
             AbrirBase();
             lst.IsRefreshing = false;
             this.Appearing += MainPage_Appearing;
-        }
-
-        private void MainPage_Appearing(object sender, EventArgs e)
-        {
-            AbrirBase();
         }
 
         // Botones de Arriba ----------------------------------------------------------------------------------------------------------- //
@@ -188,15 +175,10 @@ namespace AppBaseLocal
 
         private async Task ItemSeleccionado(object sender, ItemTappedEventArgs e)
         {
-            var elemento = e.Item as Productos;
-            var detailPage = new DetalleProducto();
-            detailPage.BindingContext = elemento;
-            await Navigation.PushAsync(detailPage);
-
-            /*
-            var action = await DisplayActionSheet("Acciones para el producto", "Cancelar",null, "Eliminar", "Editar");
-            Debug.WriteLine("Action: " + action);
-            */
+            var elemento = e.Item as Ventas;
+            var detailPageVenta = new DetalleVenta();
+            detailPageVenta.BindingContext = elemento;
+            await Navigation.PushAsync(detailPageVenta);
         }
 
         private void MenuItem_Clicked(object sender, EventArgs e)

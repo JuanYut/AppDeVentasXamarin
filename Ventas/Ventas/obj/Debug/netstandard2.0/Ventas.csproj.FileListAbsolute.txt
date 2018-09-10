@@ -15,3 +15,6 @@ D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\Venta
 D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\NuevaVenta.xaml.g.cs
 D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\AgregarCliente.xaml.g.cs
 D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\ListaProducto.xaml.g.cs
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\DetalleCliente.xaml.g.cs
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\ListaCliente.xaml.g.cs
+D:\ProgramasVisualStudio2017\Ventas\Ventas\Ventas\obj\Debug\netstandard2.0\DetalleVenta.xaml.g.cs

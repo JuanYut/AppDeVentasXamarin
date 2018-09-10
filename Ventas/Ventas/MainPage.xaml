@@ -9,13 +9,11 @@
         <ToolbarItem Name="MenuItem1" Order="Primary" Icon="mas.png" Text="Nueva Venta" Priority="0" Clicked="MenuItem1_Clicked" />
     </ContentPage.ToolbarItems>
 
-
     <ContentPage.Content>
         <!--AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"-->
 
         <StackLayout BackgroundColor="White">
             <!-- Place new controls here -->
-
 
             <ListView x:Name="lst" HasUnevenRows="True" Margin="15,5,15,15" ItemTapped="ItemSeleccionado">
                 <ListView.ItemTemplate>
@@ -25,23 +23,20 @@
                             <Frame BorderColor="Brown" BackgroundColor="White" Margin="5" CornerRadius="10">
                                 <StackLayout Orientation="Horizontal">
                                     <StackLayout Orientation="Vertical">
-                                        <Label Text="Nombre" FontSize="Micro" FontAttributes="Bold"/>
-                                        <Label Text="{Binding Nombre}" FontSize="Small" TextColor="Brown"></Label>
+                                        <Label Text="Fecha" FontSize="Micro" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Fecha}" FontSize="Small" TextColor="Brown"></Label>
 
-                                        <Label Text="Precio de venta" FontSize="Micro" FontAttributes="Bold"/>
-                                        <Label Text="{Binding PreciodeVenta}" TextColor="Brown" FontSize="Small"></Label>
+                                        <Label Text="Cliente" FontSize="Micro" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Cliente}" TextColor="Brown" FontSize="Small"></Label>
 
-                                        <Label Text="Cantidad" FontSize="Micro" FontAttributes="Bold"/>
-                                        <Label Text="{Binding Cantidad}" TextColor="Brown" FontSize="Small"></Label>
+                                        <Label Text="Producto" FontSize="Micro" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Producto}" TextColor="Brown" FontSize="Small"></Label>
 
-                                        <Label Text="Precio de costo" FontSize="Micro" FontAttributes="Bold"/>
-                                        <Label Text="{Binding PreciodeCosto}" TextColor="Brown" FontSize="Small"></Label>
-
-                                        <Label Text="Descipción" FontSize="Micro" FontAttributes="Bold"/>
-                                        <Label Text="{Binding Descripcion}" TextColor="Brown" FontSize="Small"></Label>
+                                        <Label Text="Pagado" FontSize="Micro" FontAttributes="Bold"/>
+                                        <Label Text="{Binding Pagado}" TextColor="Brown" FontSize="Small"></Label>
                                     </StackLayout>
-                                    <!--Label Text="{Binding idpersona}" TextColor="Blue" HeightRequest="30" WidthRequest="50" HorizontalOptions="EndAndExpand"/-->
-                                    <Image Source="{Binding Foto}" HeightRequest="30" WidthRequest="150" HorizontalOptions="EndAndExpand" Margin="5"/>
+                                    <!-- Label Text="{Binding idpersona}" TextColor="Blue" HeightRequest="30" WidthRequest="50" HorizontalOptions="EndAndExpand"
+                                    <Image Source="{Binding Foto}" HeightRequest="30" WidthRequest="150" HorizontalOptions="EndAndExpand" Margin="5"/> /-->
                                 </StackLayout>
                             </Frame>
                         </ViewCell>

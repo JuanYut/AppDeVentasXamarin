@@ -8,13 +8,11 @@
         <ToolbarItem Name="MenuItem1" Order="Primary" Icon="mas.png" Text="Nuevo Producto" Priority="0" Clicked="BotonAgregarProducto" />
     </ContentPage.ToolbarItems>
 
-
     <ContentPage.Content>
         <!--AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"-->
 
         <StackLayout BackgroundColor="White">
             <!-- Place new controls here -->
-
 
             <ListView x:Name="lst" HasUnevenRows="True" Margin="15,5,15,15" ItemTapped="ItemSeleccionado">
                 <ListView.ItemTemplate>

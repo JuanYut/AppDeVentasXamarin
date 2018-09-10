@@ -165,6 +165,8 @@ namespace Ventas
             detailPage.BindingContext = elemento;
             await Navigation.PushAsync(detailPage);
 
+            //await Application.Current.MainPage.Navigation.PopAsync();
+
             /*
             var action = await DisplayActionSheet("Acciones para el producto", "Cancelar",null, "Eliminar", "Editar");
             Debug.WriteLine("Action: " + action);
